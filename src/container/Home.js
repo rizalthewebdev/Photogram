@@ -9,12 +9,14 @@ import Pins from '../container/Pins'
 import { userQuery } from '../utils/data'
 import { client } from '../client'
 import logo from '../assets/logo.png'
+import { fetchUser } from '../utils/fetchUser'
+
 
 const Home = () => {
 
     const [toggleSidebar, setToggleSidebar] = useState(false)
     const [user, setUser] = useState(null)
-    const userInfo = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear()
+    const userInfo = fetchUser()
     const scrollRef = useRef(null)
 
     useEffect(() => {
@@ -46,7 +48,7 @@ const Home = () => {
                     </Link>
                 </div>
                 {toggleSidebar && (
-                    <div className="fixed w-3/5 bg-white h-screen overflow-y-auto shadow-md z-10 animate-slide-in">
+                    <div className="fixed w-4/5 bg-white h-screen overflow-y-auto shadow-md z-10 animate-slide-in">
                         <div className="absolute w-full flex justify-end items-center p-2">
                             <MdClose fontSize={35} className="cursor-pointer mx-3" onClick={() => setToggleSidebar(false)} />
                         </div>
