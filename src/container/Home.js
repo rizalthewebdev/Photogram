@@ -4,7 +4,7 @@ import { MdClose } from 'react-icons/md'
 import { Link, Routes, Route } from 'react-router-dom'
 
 
-import { Sidebar, Login, UserProfile } from '../components'
+import { Sidebar, UserProfile } from '../components'
 import Pins from '../container/Pins'
 import { userQuery } from '../utils/data'
 import { client } from '../client'
@@ -48,7 +48,7 @@ const Home = () => {
                     </Link>
                 </div>
                 {toggleSidebar && (
-                    <div className="fixed w-4/5 bg-white h-screen overflow-y-auto shadow-md z-10 animate-slide-in">
+                    <div className="fixed w-3/5 bg-white h-screen overflow-y-auto shadow-md z-10 animate-slide-in">
                         <div className="absolute w-full flex justify-end items-center p-2">
                             <MdClose fontSize={35} className="cursor-pointer mx-3" onClick={() => setToggleSidebar(false)} />
                         </div>

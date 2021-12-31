@@ -3,7 +3,6 @@ import { AiOutlineCloudUpload } from 'react-icons/ai'
 import { MdDelete } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 
-
 import { client } from '../client'
 import Spinner from './Spinner'
 import { categories } from '../utils/data'
@@ -97,7 +96,7 @@ const CreatePin = ({ user }) => {
                                     </p>
                                 </div>
                                 <p className="mt-5 text-gray-400">
-                                    Max image size 20 MB
+                                    Max image size 10 MB
                                 </p>
                             </div>
                             <input 
@@ -109,7 +108,7 @@ const CreatePin = ({ user }) => {
                         </label>
                     ) : (
                         <div className="relative h-full">
-                            <img src={imageAsset?.url} alt="uploaded-pic" className="h-full w-full" />
+                            <img src={imageAsset?.url} alt="uploaded-pic" className="h-full w-full object-contain object-center" />
                             <button
                                 type="button"
                                 className="absolute bottom-3 right-3 p-3 rounded-full text-xl bg-white cursor-pointer outline-none hover:shadow-md transition-all duration-500 ease-in-out"

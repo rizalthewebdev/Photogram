@@ -1,15 +1,15 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { RiHomeSmileFill } from 'react-icons/ri'
-import { MdOutlineArrowForwardIos } from 'react-icons/md'
+import { IoIosArrowForward } from 'react-icons/io'
 import { categories } from '../utils/data'
 
 import logo from '../assets/logo.png'
 
 const Sidebar = ({ user, closeToggle }) => {
 
-    const isNotActiveStyle = 'flex items-center px-5 gap-2 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize'
-    const isActiveStyle = 'flex items-center px-5 gap-2 font-bold border-r-2 border-black transition-all duration-200 ease-in-out capitalize'
+    const isNotActiveStyle = 'flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize'
+    const isActiveStyle = 'flex items-center px-5 gap-3 font-bold border-r-2 border-black transition-all duration-200 ease-in-out capitalize'
 
 
     const handleCloseSidebar = () => {
@@ -21,15 +21,16 @@ const Sidebar = ({ user, closeToggle }) => {
             <div className="flex flex-col">
                 <Link
                     to="/"
-                    className="flex px-5 gap-2 my-5 pt-1 w-190 items-center"
+                    className="flex px-5 gap-2 my-6 pt-1 w-190 items-center"
                     onClick={handleCloseSidebar}
                 >
-                    <img src={logo} alt="Logo" className="w-28" />
+                    <img src={logo} alt="Logo" className="w-full" />
                 </Link>
                 <div className="flex flex-col gap-5">
                     <NavLink
                         to="/"
                         className={({ isActive }) => isActive ? isActiveStyle : isNotActiveStyle}
+                        onClick={handleCloseSidebar}
                     >
                         <RiHomeSmileFill /> Home
                     </NavLink>
@@ -40,6 +41,7 @@ const Sidebar = ({ user, closeToggle }) => {
                         <NavLink
                             to={`/category/${category.name}`}
                             className={({ isActive }) => isActive ? isActiveStyle : isNotActiveStyle}
+                            onClick={handleCloseSidebar}
                             key={category.name}
                         >
                             <img src={category.image} alt="category-img" className="w-8 h-8 rounded-full shadow-sm" />
@@ -56,6 +58,7 @@ const Sidebar = ({ user, closeToggle }) => {
                 >
                     <img src={user.image} alt="" className="w-10 h-10 rounded-full" />
                     <p>{user.userName}</p>
+                    <IoIosArrowForward />
                 </Link>
             )}
         </div>

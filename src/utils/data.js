@@ -1,34 +1,31 @@
 export const categories = [
 {
-    name: 'wallpaper',
-    image: 'https://i.pinimg.com/236x/03/48/b6/0348b65919fcbe1e4f559dc4feb0ee13.jpg',
+    name: 'anime',
+    image: 'https://i.pinimg.com/564x/89/12/bd/8912bd831714dcd3d8985a125d62ae7e.jpg',
 },
 {
-    name: 'websites',
-    image: 'https://i.pinimg.com/750x/66/b1/29/66b1296d36598122e6a4c5452b5a7149.jpg',
-},
-{
-    name: 'photo',
-    image: 'https://i.pinimg.com/236x/72/8c/b4/728cb43f48ca762a75da645c121e5c57.jpg',
-},
-{
-    name: 'food',
-    image: 'https://i.pinimg.com/236x/7d/ef/15/7def15ac734837346dac01fad598fc87.jpg',
-},
-{
-    name: 'nature',
-    image: 'https://i.pinimg.com/236x/b9/82/d4/b982d49a1edd984c4faef745fd1f8479.jpg',
-},
-{
-    name: 'quotes',
-    image: 'https://i.pinimg.com/236x/46/7c/17/467c17277badb00b638f8ec4da89a358.jpg',
-}, {
     name: 'cats',
     image: 'https://i.pinimg.com/236x/6c/3c/52/6c3c529e8dadc7cffc4fddedd4caabe1.jpg',
 },
 {
-    name: 'others',
-    image: 'https://i.pinimg.com/236x/2e/63/c8/2e63c82dfd49aca8dccf9de3f57e8588.jpg',
+    name: 'setup',
+    image: 'https://i.pinimg.com/564x/ab/2b/74/ab2b7441c10791f927ede084f6477f5f.jpg',
+},
+{
+    name: 'coding',
+    image: 'https://i.pinimg.com/564x/43/70/fc/4370fc6bb4ea8ff710d683b59a29b892.jpg',
+},
+{
+    name: 'game',
+    image: 'https://i.pinimg.com/564x/33/07/71/33077153534adc0e671279f12a5f9091.jpg',
+},
+{
+    name: 'meme',
+    image: 'https://i.pinimg.com/564x/2d/bd/7f/2dbd7feb530536368e994c944b2b9f8a.jpg',
+},
+{
+    name: 'other',
+    image: 'https://i.pinimg.com/736x/27/8a/14/278a1425a0df3954c2674eda2f88353e.jpg',
 },
 ];
   
@@ -72,7 +69,7 @@ export const categories = [
         userName,
         image
       },
-     save[]{
+    save[]{
         postedBy->{
           _id,
           userName,
